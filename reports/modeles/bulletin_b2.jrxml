@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="bulletin_b3" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5fc8cda5-b7a3-4173-8038-e1d4dd1e09ad">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#FAFAFA">
+		<box>
+			<pen lineWidth="0.5" lineColor="#EBE6E6"/>
+			<topPen lineWidth="0.5" lineColor="#EBE6E6"/>
+			<leftPen lineWidth="0.5" lineColor="#EBE6E6"/>
+			<bottomPen lineWidth="0.5" lineColor="#EBE6E6"/>
+			<rightPen lineWidth="0.5" lineColor="#EBE6E6"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#F5F5F5">
+		<box>
+			<pen lineWidth="0.5" lineColor="#EBE6E6"/>
+			<topPen lineWidth="0.5" lineColor="#EBE6E6"/>
+			<leftPen lineWidth="0.5" lineColor="#EBE6E6"/>
+			<bottomPen lineWidth="0.5" lineColor="#EBE6E6"/>
+			<rightPen lineWidth="0.5" lineColor="#EBE6E6"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#EBE6E6"/>
+			<topPen lineWidth="0.5" lineColor="#EBE6E6"/>
+			<leftPen lineWidth="0.5" lineColor="#EBE6E6"/>
+			<bottomPen lineWidth="0.5" lineColor="#EBE6E6"/>
+			<rightPen lineWidth="0.5" lineColor="#EBE6E6"/>
+		</box>
+	</style>
+	<subDataset name="dataset1" uuid="cfdff987-0027-43a6-bd1b-a007ec8e6950">
+		<field name="dateCondamnation" class="java.lang.String"/>
+		<field name="tribunal" class="java.lang.String"/>
+		<field name="natureCrimes" class="java.lang.String"/>
+		<field name="dateCrimes" class="java.lang.String"/>
+		<field name="naturePeines" class="java.lang.String"/>
+		<field name="dateMandat" class="java.lang.String"/>
+		<field name="observations" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="datasource" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="nom" class="java.lang.String"/>
+	<parameter name="prenom" class="java.lang.String"/>
+	<parameter name="nomPere" class="java.lang.String"/>
+	<parameter name="prenomPere" class="java.lang.String"/>
+	<parameter name="nomMere" class="java.lang.String"/>
+	<parameter name="prenomMere" class="java.lang.String"/>
+	<parameter name="dateNaissance" class="java.lang.String"/>
+	<parameter name="dateTraitement" class="java.lang.String"/>
+	<parameter name="lieuNaissance" class="java.lang.String"/>
+	<parameter name="domicile" class="java.lang.String"/>
+	<parameter name="situationMatrimoniale" class="java.lang.String"/>
+	<parameter name="profession" class="java.lang.String"/>
+	<parameter name="nationalite" class="java.lang.String"/>
+	<parameter name="numeroTraitement" class="java.lang.String"/>
+	<parameter name="numeroDemande" class="java.lang.String"/>
+	<parameter name="tribunal" class="java.lang.String"/>
+	<parameter name="barcode" class="java.lang.String"/>
+	<parameter name="copie" class="java.lang.String"/>
+	<parameter name="armoirie" class="java.lang.String"/>
+	<parameter name="signature" class="java.lang.String"/>
+	<parameter name="neant" class="java.lang.String"/>
+	<parameter name="references" class="java.lang.String"/>
+	<parameter name="background" class="java.lang.String"/>
+	<parameter name="prefixe_nomme" class="java.lang.String"/>
+	<parameter name="prefixe_filiation" class="java.lang.String"/>
+	<parameter name="prefixe_naissance" class="java.lang.String"/>
+	<background>
+		<band height="600" splitType="Stretch">
+			<property name="net.sf.jasperreports.export.html.use.background.image.to.align"/>
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+				<reportElement x="-50" y="150" width="500" height="450" uuid="2b3eda7a-3165-4931-a54d-cf10923bfe3f"/>
+				<imageExpression><![CDATA[$P{background}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="378" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout"/>
+			<staticText>
+				<reportElement positionType="Float" x="22" y="88" width="242" height="15" uuid="02428452-cbbb-46bc-8917-bd4d5fe6e3b6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="FoundrySterling-ExtraBoldOSF" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SERVICE NATIONAL DU CASIER JUDICIAIRE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="145" width="555" height="25" uuid="3a7b2f6b-6571-4704-9e57-1a2b059af877">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="FoundrySterling-Bold" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BULLETIN N°2 DU CASIER JUDICIAIRE]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="39" y="178" width="114" height="114" uuid="2d32ad6f-73db-45d7-bc2c-26a5c735f017">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<jr:QRCode xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<jr:codeExpression><![CDATA[$P{barcode}]]></jr:codeExpression>
+				</jr:QRCode>
+			</componentElement>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="312" y="182" width="228" height="15" uuid="ed366680-c453-4d92-ac33-7d4e70a6000d"/>
+				<textElement>
+					<font fontName="FoundrySterling-Bold" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nom} + " " +$P{prenom}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="312" y="207" width="228" height="15" uuid="1a730d3d-7f0c-4b58-b315-e37db786ea82"/>
+				<textElement>
+					<font fontName="FoundrySterling-Bold" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nomPere} + "  " + $P{prenomPere}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="169" y="230" width="123" height="15" uuid="65f0d914-7ef6-4654-bf6d-117176ca6afa">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="FoundrySterling" size="12"/>
+				</textElement>
+				<text><![CDATA[et de]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="312" y="231" width="228" height="15" uuid="eea403b1-cafa-4d7b-8bf4-6668d7eb2fad"/>
+				<textElement>
+					<font fontName="FoundrySterling-Bold" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nomMere} + "  " + $P{prenomMere}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="312" y="253" width="228" height="15" uuid="864506f8-5545-49d0-87fb-d27b7aca7754"/>
+				<textElement>
+					<font fontName="FoundrySterling-Bold" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dateNaissance}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="169" y="293" width="123" height="15" uuid="e6e54a74-6fa4-4bed-a0d7-4d7c1f40bfe8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="FoundrySterling" size="12"/>
+				</textElement>
+				<text><![CDATA[domicile actuel]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="312" y="292" width="228" height="15" uuid="3384eee4-bb20-48e9-8c18-783d8d424029"/>
+				<textElement>
+					<font fontName="FoundrySterling-Bold" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{domicile}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="169" y="314" width="123" height="15" uuid="d2c0c7ea-e79a-4637-a074-904ecd97dc15">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="FoundrySterling" size="12"/>
+				</textElement>
+				<text><![CDATA[situation matrimoniale]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="312" y="312" width="228" height="15" uuid="6edcd268-7df5-4786-b766-abf1759c5603"/>
+				<textElement>
+					<font fontName="FoundrySterling-Bold" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{situationMatrimoniale}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="169" y="356" width="123" height="15" uuid="2336997d-60ea-41a3-85b3-dbf2fc7c3c64">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="FoundrySterling" size="12"/>
+				</textElement>
+				<text><![CDATA[profession]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="312" y="355" width="228" height="15" uuid="b276262c-a7f7-4748-9302-b36f5911d99f"/>
+				<textElement>
+					<font fontName="FoundrySterling-Bold" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{profession}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="169" y="334" width="123" height="15" uuid="be6aab9f-7add-4551-9d13-e58292d0d0c5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="FoundrySterling" size="12"/>
+				</textElement>
+				<text><![CDATA[nationalité]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="311" y="334" width="228" height="15" uuid="c255c3c9-6bb2-4890-a7a5-8ae701ab7658"/>
+				<textElement>
+					<font fontName="FoundrySterling-Bold" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nationalite}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="383" y="10" width="168" height="123" uuid="30622454-ebe3-46a7-aa6e-1e7533eb7fc9"/>
+				<imageExpression><![CDATA[$P{armoirie}]]></imageExpression>
+			</image>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="22" y="102" width="242" height="16" uuid="a90ad434-4a3a-4de5-bf14-93ea96953b9f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="FoundrySterling" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tribunal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="169" y="272" width="123" height="15" uuid="e2037e74-8f4c-46d6-91b7-ace6c8771a56">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="FoundrySterling" size="12"/>
+				</textElement>
+				<text><![CDATA[à]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="312" y="271" width="228" height="15" uuid="5caec1ba-779a-48a4-ad16-ac43074dea61"/>
+				<textElement>
+					<font fontName="FoundrySterling-Bold" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{lieuNaissance}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="42" y="299" width="109" height="15" uuid="60ca351a-5165-4a42-b8df-99cf78f00ac9"/>
+				<textElement textAlignment="Left">
+					<font fontName="FoundrySterling" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["N° DEM. : " +  $P{numeroDemande}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="42" y="315" width="109" height="15" uuid="a9451954-e7b9-42ec-bffa-c6f92c566d03"/>
+				<textElement textAlignment="Left">
+					<font fontName="FoundrySterling" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["N° TRAIT. : " + $P{numeroTraitement}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="169" y="182" width="123" height="17" uuid="0e45d6bf-7c27-4f8f-b0d3-f04454de9a44"/>
+				<textElement>
+					<font fontName="FoundrySterling" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{prefixe_nomme}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="169" y="208" width="123" height="17" uuid="3e778327-ed8e-49a1-9a4e-22393e8a3681"/>
+				<textElement>
+					<font fontName="FoundrySterling" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{prefixe_filiation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="252" width="123" height="17" uuid="3875dcfe-d7af-4e2d-833f-f3820c33b0b5"/>
+				<textElement>
+					<font fontName="FoundrySterling" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{prefixe_naissance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="22" y="21" width="242" height="25" uuid="d48258bb-59c7-4373-ac92-92d680d5d790">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="FoundrySterling-ExtraBoldOSF" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["MINISTÈRE DE LA JUSTICE" + "\nET DE LA LEGISLATION"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="22" y="53" width="242" height="25" uuid="c6e20b3d-c477-4fdb-999a-297935447495">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="FoundrySterling-ExtraBoldOSF" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["DIRECTION DES AFFAIRES PÉNALES" + "\nET DES GRÂCES"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="159" splitType="Stretch">
+			<textField textAdjust="StretchHeight">
+				<reportElement x="40" y="110" width="527" height="16" uuid="f3ba9e9e-5d6d-475e-8bea-b2313d239d87"/>
+				<textElement markup="html">
+					<font fontName="FoundrySterling" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{references} == null ? "":$P{references}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="14" width="555" height="15" uuid="a89a8a77-575a-45d5-b6a8-4d6bb68d24b4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="FoundrySterling-Bold" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RELEVÉ DES CONDAMNATIONS APPLICABLES]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="34" width="555" height="71" isPrintWhenDetailOverflows="true" uuid="ab4e151c-c00d-480c-92ab-285b19120462">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="dataset1" uuid="809b7d8b-f338-4151-9dd8-5fe97d358e5a">
+						<dataSourceExpression><![CDATA[$P{datasource}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="100" uuid="08afc593-e713-43f3-b431-5d31a9d32b78">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:columnHeader style="Table_CH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="100" height="40" uuid="c600fb2a-20af-4302-a746-1a5238e05ca7"/>
+								<box>
+									<pen lineColor="#827E7E"/>
+									<rightPen lineWidth="1.0" lineColor="#F2EDED"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="FoundrySterling-Bold" size="9" isBold="true"/>
+								</textElement>
+								<text><![CDATA[DATE DES CONDAMNATIONS]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+							<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="100" height="30" isPrintWhenDetailOverflows="true" uuid="43ce26c0-ddae-4101-ad87-21e7df698290">
+									<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+									<property name="net.sf.jasperreports.consume.space.on.overflow" value="true"/>
+									<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+								</reportElement>
+								<box padding="5">
+									<pen lineColor="#827E7E"/>
+									<rightPen lineWidth="1.0" lineColor="#F2EDED"/>
+								</box>
+								<textElement textAlignment="Justified" verticalAlignment="Middle">
+									<font fontName="FoundrySterling" size="10"/>
+									<paragraph lineSpacingSize="1.0"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{dateCondamnation}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70" uuid="40e41bae-993f-4ead-bfab-dfc4d81e336f">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:columnHeader style="Table_CH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="70" height="40" uuid="ea08b288-f120-4a6c-9798-062cff5e5cd8"/>
+								<box>
+									<pen lineColor="#827E7E"/>
+									<rightPen lineWidth="1.0" lineColor="#F2EDED"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="FoundrySterling-Bold" size="9" isBold="true"/>
+								</textElement>
+								<text><![CDATA[RÉFÉRENCE DE LA DÉCISION]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField textAdjust="StretchHeight">
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="70" height="30" isPrintWhenDetailOverflows="true" uuid="e76b065f-bfdb-447f-bc84-c80e2906584e">
+									<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+									<property name="net.sf.jasperreports.consume.space.on.overflow" value="true"/>
+									<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+								</reportElement>
+								<box padding="5">
+									<pen lineColor="#827E7E"/>
+									<rightPen lineWidth="1.0" lineColor="#F2EDED"/>
+								</box>
+								<textElement textAlignment="Justified" verticalAlignment="Middle">
+									<font fontName="FoundrySterling"/>
+									<paragraph lineSpacingSize="1.0"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{tribunal}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="054946ce-1c66-4a18-b877-3f9566b3f3d1">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:columnHeader style="Table_CH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="40" uuid="0211ff7d-c275-47df-82de-6faa57658e59"/>
+								<box>
+									<pen lineColor="#827E7E"/>
+									<rightPen lineWidth="1.0" lineColor="#F2EDED"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="FoundrySterling-Bold" size="9" isBold="true"/>
+								</textElement>
+								<text><![CDATA[INFRACTIONS]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField textAdjust="StretchHeight">
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="90" height="30" isPrintWhenDetailOverflows="true" uuid="30b83722-2b36-4112-a3ef-ca7393e0624f">
+									<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+									<property name="net.sf.jasperreports.consume.space.on.overflow" value="true"/>
+									<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+								</reportElement>
+								<box padding="5">
+									<pen lineColor="#827E7E"/>
+									<rightPen lineWidth="1.0" lineColor="#F2EDED"/>
+								</box>
+								<textElement textAlignment="Justified" verticalAlignment="Middle">
+									<font fontName="FoundrySterling"/>
+									<paragraph lineSpacingSize="1.0"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{natureCrimes}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70" uuid="6f8c6ed0-2c59-416f-ba26-611c901b5773">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						<jr:columnHeader style="Table_CH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="70" height="40" uuid="ed1a261a-bdc2-4062-8b8b-3ca96e8f510b"/>
+								<box>
+									<pen lineColor="#827E7E"/>
+									<rightPen lineWidth="1.0" lineColor="#F2EDED"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="FoundrySterling-Bold" size="9" isBold="true"/>
+								</textElement>
+								<text><![CDATA[DATE DES FAITS]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField textAdjust="StretchHeight">
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="70" height="30" isPrintWhenDetailOverflows="true" uuid="f2dea05b-cb3a-41ce-b61f-92fcdedba884">
+									<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+									<property name="net.sf.jasperreports.consume.space.on.overflow" value="true"/>
+									<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+								</reportElement>
+								<box padding="5">
+									<pen lineColor="#827E7E"/>
+									<rightPen lineWidth="1.0" lineColor="#F2EDED"/>
+								</box>
+								<textElement textAlignment="Justified" verticalAlignment="Middle">
+									<font fontName="FoundrySterling"/>
+									<paragraph lineSpacingSize="1.0"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{dateCrimes}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70" uuid="1331de22-a56c-47d0-b96a-8c927ccfc926">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+						<jr:columnHeader style="Table_CH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="70" height="40" uuid="39a3cb1c-28e9-4a4f-9f7c-2b228c31c350"/>
+								<box>
+									<pen lineColor="#827E7E"/>
+									<rightPen lineWidth="1.0" lineColor="#F2EDED"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="FoundrySterling-Bold" size="9" isBold="true"/>
+								</textElement>
+								<text><![CDATA[NATURE ET QUANTUM DES PEINES]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField textAdjust="StretchHeight">
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="70" height="30" isPrintWhenDetailOverflows="true" uuid="bcf92e3b-d64d-4710-b1fd-0eaacb5a6ab2">
+									<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+									<property name="net.sf.jasperreports.consume.space.on.overflow" value="true"/>
+									<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+								</reportElement>
+								<box padding="5">
+									<pen lineColor="#827E7E"/>
+									<rightPen lineWidth="1.0" lineColor="#F2EDED"/>
+								</box>
+								<textElement textAlignment="Justified" verticalAlignment="Middle">
+									<font fontName="FoundrySterling"/>
+									<paragraph lineSpacingSize="1.0"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{naturePeines}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70" uuid="a73d1d79-7289-4823-a299-09e68536ea66">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+						<jr:columnHeader style="Table_CH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="70" height="40" uuid="bcf6559e-aa44-4fc5-a858-21cd2343a300"/>
+								<box>
+									<pen lineColor="#827E7E"/>
+									<rightPen lineWidth="1.0" lineColor="#F2EDED"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="FoundrySterling-Bold" size="9" isBold="true"/>
+								</textElement>
+								<text><![CDATA[DATE DU MANDAT DE DÉPÔT]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField textAdjust="StretchHeight">
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="70" height="30" isPrintWhenDetailOverflows="true" uuid="7a32b7e2-9c20-4cfb-99f1-d3254565ee30">
+									<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+									<property name="net.sf.jasperreports.consume.space.on.overflow" value="true"/>
+									<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+								</reportElement>
+								<box padding="5">
+									<pen lineColor="#827E7E"/>
+									<rightPen lineWidth="1.0" lineColor="#F2EDED"/>
+								</box>
+								<textElement textAlignment="Justified" verticalAlignment="Middle">
+									<font fontName="FoundrySterling"/>
+									<paragraph lineSpacingSize="1.0"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{dateMandat}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="85" uuid="d5986561-7f22-4d23-979f-340c1c5c4baf">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column7"/>
+						<jr:columnHeader style="Table_CH" height="40" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="85" height="40" uuid="76c10cca-f78f-4624-926c-89db467df382"/>
+								<box>
+									<pen lineColor="#827E7E"/>
+								</box>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="FoundrySterling-Bold" size="9" isBold="true"/>
+								</textElement>
+								<text><![CDATA[DOCUMENT D'IDENTITÉ JOINT]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField textAdjust="StretchHeight">
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" isPrintRepeatedValues="false" x="0" y="0" width="85" height="30" isPrintWhenDetailOverflows="true" uuid="674d8cbc-1a34-4657-8860-0df9d6d110c6">
+									<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+									<property name="net.sf.jasperreports.consume.space.on.overflow" value="true"/>
+									<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+									<property name="net.sf.jasperreports.export.xls.ignore.cell.border" value="false"/>
+								</reportElement>
+								<box padding="5">
+									<pen lineColor="#827E7E"/>
+								</box>
+								<textElement textAlignment="Justified" verticalAlignment="Middle">
+									<font fontName="FoundrySterling"/>
+									<paragraph lineSpacingSize="1.0"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{observations}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="144" splitType="Stretch">
+			<textField>
+				<reportElement x="322" y="6" width="190" height="27" uuid="c40863b0-351b-49b1-b6a5-5626e0ee1738"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="FoundrySterling" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Le directeur des affaires pénales\n et des grâces"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="41" y="119" width="30" height="14" uuid="b2fe00de-dfc3-42bb-bcc1-f4379f0c06b9"/>
+				<textElement textAlignment="Left">
+					<font fontName="FoundrySterling" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" evaluationTime="Report">
+				<reportElement x="71" y="119" width="30" height="14" uuid="97625972-d2b4-4f86-bcd7-7044a4e0c51b"/>
+				<textElement textAlignment="Left">
+					<font fontName="FoundrySterling" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["sur  " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="100" y="119" width="80" height="14" uuid="62e33118-7386-4782-9992-4091de28d640"/>
+				<textElement textAlignment="Left">
+					<font fontName="FoundrySterling" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["extrait " + $P{copie}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="322" y="104" width="229" height="15" uuid="d84d104d-56e2-4f58-bb78-7e5b0a190e1b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="FoundrySterling" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amouzou Tossa AKOHOUEGNON]]></text>
+			</staticText>
+			<image>
+				<reportElement x="317" y="32" width="190" height="74" uuid="dea24fc1-d8ce-4a1d-b3a1-fceb718c5584">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{signature}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="42" y="6" width="220" height="15" uuid="b4bb0f0a-640e-48ca-ac6e-277aab2cc57e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="FoundrySterling" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Cachet du centre de traitement"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="43" y="101" width="220" height="15" uuid="4c5809f3-a9a2-4caa-aa4d-25ff8e02c4f2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="FoundrySterling" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Délivré le " +  $P{dateTraitement}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

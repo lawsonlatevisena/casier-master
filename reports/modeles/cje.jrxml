@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="bulletin_b3" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5fc8cda5-b7a3-4173-8038-e1d4dd1e09ad">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<subDataset name="dataset1" uuid="cfdff987-0027-43a6-bd1b-a007ec8e6950">
+		<field name="dateCondamnation" class="java.lang.String"/>
+		<field name="tribunal" class="java.lang.String"/>
+		<field name="natureCrimes" class="java.lang.String"/>
+		<field name="dateCrimes" class="java.lang.String"/>
+		<field name="naturePeines" class="java.lang.String"/>
+		<field name="dateMandat" class="java.lang.String"/>
+		<field name="observations" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="nom" class="java.lang.String"/>
+	<parameter name="prenom" class="java.lang.String"/>
+	<parameter name="nomPere" class="java.lang.String"/>
+	<parameter name="prenomPere" class="java.lang.String"/>
+	<parameter name="nomMere" class="java.lang.String"/>
+	<parameter name="prenomMere" class="java.lang.String"/>
+	<parameter name="dateNaissance" class="java.lang.String"/>
+	<parameter name="lieuNaissance" class="java.lang.String"/>
+	<parameter name="domicile" class="java.lang.String"/>
+	<parameter name="situationMatrimoniale" class="java.lang.String"/>
+	<parameter name="profession" class="java.lang.String"/>
+	<parameter name="nationalite" class="java.lang.String"/>
+	<parameter name="tribunal" class="java.lang.String"/>
+	<parameter name="barcode" class="java.lang.String"/>
+	<parameter name="copie" class="java.lang.String"/>
+	<parameter name="nomGreffier" class="java.lang.String"/>
+	<parameter name="dateEntreeTogo" class="java.lang.String"/>
+	<parameter name="piece" class="java.lang.String"/>
+	<parameter name="observation" class="java.lang.String"/>
+	<parameter name="armoirie" class="java.lang.String"/>
+	<parameter name="signature" class="java.lang.String"/>
+	<parameter name="neant" class="java.lang.String"/>
+	<parameter name="references" class="java.lang.String"/>
+	<parameter name="background" class="java.lang.String"/>
+	<parameter name="dateTraitement" class="java.lang.String"/>
+	<parameter name="prefixe_nomme" class="java.lang.String"/>
+	<parameter name="prefixe_filiation" class="java.lang.String"/>
+	<parameter name="prefixe_naissance" class="java.lang.String"/>
+	<parameter name="numeroDemande" class="java.lang.String"/>
+	<parameter name="numeroTraitement" class="java.lang.String"/>
+	<background>
+		<band height="500" splitType="Stretch">
+			<property name="net.sf.jasperreports.export.html.use.background.image.to.align"/>
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+				<reportElement x="-50" y="100" width="500" height="400" uuid="2b3eda7a-3165-4931-a54d-cf10923bfe3f"/>
+				<imageExpression><![CDATA[$P{background}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="591" splitType="Stretch">
+			<textField textAdjust="StretchHeight">
+				<reportElement x="30" y="177" width="490" height="50" uuid="7845aac1-c177-4ef1-9e73-74a4e67081a0"/>
+				<textElement textAlignment="Justified" markup="styled">
+					<font fontName="FoundrySterling" size="14"/>
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Je soussigné <b>" + "Amouzou Tossa AKOHOUEGNON"+ ",</b> directeur des affaires pénales et des grâces (DAPG),  atteste par la présente que : "]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="20" y="490" width="500" height="20" uuid="32e9dd6a-a40c-444a-a932-a452c9e9664f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="styled">
+					<font fontName="FoundrySterling-Bold" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA["n 'a subi aucune condamnation depuis son arrivée au Togo."]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="164" y="229" width="356" height="20" uuid="cbc2b08f-4ed0-4a7f-a438-a1e8b8aa78e2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="FoundrySterling-Bold" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nom} + " " +$P{prenom}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="164" y="259" width="356" height="20" uuid="bd2f02fc-16c8-44b0-ae6f-63b528b7a592">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="FoundrySterling-Bold" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nomPere} + "  " + $P{prenomPere}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="30" y="288" width="123" height="20" uuid="520296e2-4702-485b-aa64-7aca0667718c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="FoundrySterling" size="14"/>
+				</textElement>
+				<text><![CDATA[et de]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="164" y="288" width="356" height="20" uuid="9d0d43ec-d30a-49d6-9ad7-694c08dbe5f3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="FoundrySterling-Bold" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nomMere} + "  " + $P{prenomMere}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="164" y="316" width="356" height="20" uuid="42d018fb-e9da-4401-a25d-dbd98bd9264a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="FoundrySterling-Bold" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dateNaissance}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="31" y="346" width="123" height="20" uuid="4833114b-9e80-4d43-9c96-daa6f6658efc">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="FoundrySterling" size="14"/>
+				</textElement>
+				<text><![CDATA[à]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="164" y="345" width="356" height="20" uuid="b9fe4a6a-12a1-40b2-9f86-2bbe3c4e610c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="FoundrySterling-Bold" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{lieuNaissance}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="30" y="375" width="123" height="20" uuid="69a47633-e245-4e53-abfb-f6fcd2e29054">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="FoundrySterling" size="14"/>
+				</textElement>
+				<text><![CDATA[domicile actuel]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="164" y="402" width="356" height="20" uuid="33e58b5e-29d0-432b-b2ea-cf341a25b9b5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="FoundrySterling-Bold" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{situationMatrimoniale}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="164" y="373" width="356" height="20" uuid="27aa15ea-d976-437f-9b86-e556474cc1c2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="FoundrySterling-Bold" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{domicile}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="30" y="404" width="123" height="20" uuid="22f890c9-9bdd-4e2b-bbd4-599ec81b32e5">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="FoundrySterling" size="14"/>
+				</textElement>
+				<text><![CDATA[situation matrimoniale]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="430" width="123" height="20" uuid="a9825c0c-c3f0-4761-9491-dd8490c758ca">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="FoundrySterling" size="14"/>
+				</textElement>
+				<text><![CDATA[profession]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="164" y="429" width="356" height="20" uuid="f759d003-e1eb-44c4-b29e-ad21a59e5c2e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="FoundrySterling-Bold" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{profession}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="30" y="460" width="123" height="20" uuid="a61eaa96-b16f-4b82-9a04-c5edd4d3f316">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="FoundrySterling" size="14"/>
+				</textElement>
+				<text><![CDATA[nationalité]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="164" y="459" width="356" height="20" uuid="a4dfaa04-9d52-41e1-9c7a-1cd1d16a07fb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="FoundrySterling-Bold" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nationalite}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="516" width="500" height="69" uuid="3f3e107a-5f3e-477d-96e5-3ced6b9ff333">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="FoundrySterling" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[En application de l'article 28 du decret n°2021-044/PR du 29 avril 2021 fixant les modalités d'application de la loi n°2021-005 du 1er avril 2021 relative au casier judiciaire national automatisé, la présente attestation lui est délivrée pour servir et valoir de ce que de droit.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="22" y="21" width="242" height="25" uuid="bb77200a-957f-4b99-98d4-3e281bb533e6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="FoundrySterling-ExtraBoldOSF" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["MINISTÈRE DE LA JUSTICE" + "\nET DE LA LEGISLATION"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="22" y="53" width="242" height="25" uuid="f487cbe8-346e-4157-b512-642a9d0a330b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="FoundrySterling-ExtraBoldOSF" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["DIRECTION DES AFFAIRES PÉNALES" + "\nET DES GRÂCES"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="22" y="102" width="242" height="16" uuid="b04a03f2-090e-4164-bdc9-ef680e7b39c1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="FoundrySterling" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tribunal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="22" y="88" width="242" height="15" uuid="59785e15-a017-4e0a-9605-bb7e438d4b1c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="FoundrySterling-ExtraBoldOSF" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SERVICE NATIONAL DU CASIER JUDICIAIRE]]></text>
+			</staticText>
+			<image>
+				<reportElement x="383" y="10" width="168" height="123" uuid="751d1166-af57-4e7a-b4f3-2ce52f5d5c80"/>
+				<imageExpression><![CDATA[$P{armoirie}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="0" y="145" width="555" height="25" uuid="cc287282-54f1-4301-ab9d-34e243e9b1a9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="FoundrySterling-Bold" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ATTESTATION DE NON-CONDAMNATION]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="30" y="229" width="123" height="17" uuid="75477368-4250-4c2a-abfc-8c2ff5ab2a42"/>
+				<textElement>
+					<font fontName="FoundrySterling" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{prefixe_nomme}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="259" width="123" height="17" uuid="79e969ce-0ae3-4dd1-9907-90581e9695be"/>
+				<textElement>
+					<font fontName="FoundrySterling" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{prefixe_filiation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="319" width="123" height="17" uuid="286b5be9-cfd2-467a-866d-2478fe110543"/>
+				<textElement>
+					<font fontName="FoundrySterling" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{prefixe_naissance}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageFooter>
+		<band height="211" splitType="Stretch">
+			<componentElement>
+				<reportElement x="0" y="4" width="114" height="119" uuid="2d32ad6f-73db-45d7-bc2c-26a5c735f017">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<jr:QRCode xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<jr:codeExpression><![CDATA[$P{barcode}]]></jr:codeExpression>
+				</jr:QRCode>
+			</componentElement>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="7" y="170" width="30" height="14" uuid="875c1bdd-98f6-4b53-bc5c-eaccf303fd35"/>
+				<textElement textAlignment="Left">
+					<font fontName="FoundrySterling" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" evaluationTime="Report">
+				<reportElement x="37" y="170" width="30" height="14" uuid="59cc86a9-7973-46fb-b866-720bf2844795"/>
+				<textElement textAlignment="Left">
+					<font fontName="FoundrySterling" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["sur  " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="66" y="170" width="31" height="14" uuid="e482aa3e-c285-4e7f-aee1-ce56b59e2f4f"/>
+				<textElement textAlignment="Left">
+					<font fontName="FoundrySterling" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["extrait " + $P{copie}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="121" y="30" width="168" height="15" uuid="f124c8c4-d531-4dfb-9196-18e04f230d07">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="FoundrySterling" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Cachet du centre de traitement"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="123" y="129" width="168" height="15" uuid="8298e7e8-c653-4341-92a3-a31be6b8df52">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="FoundrySterling" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Délivré le " +  $P{dateTraitement}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="322" y="32" width="190" height="27" uuid="dae580b3-38ff-4757-b119-15efb460e584"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="FoundrySterling" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Le directeur des affaires pénales\n et des grâces"]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="317" y="58" width="190" height="74" uuid="ce0c2cca-57fb-4677-82c4-3e60c3777f08">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{signature}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="322" y="130" width="229" height="15" uuid="ae82b50c-81a0-4e92-8e7d-15c7a8489837">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="FoundrySterling" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amouzou Tossa AKOHOUEGNON]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="2" y="140" width="109" height="15" uuid="6fd7541d-a9ce-42fe-960e-01de5e577586"/>
+				<textElement textAlignment="Left">
+					<font fontName="FoundrySterling" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["N° TRAIT. : " + $P{numeroTraitement}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="2" y="121" width="109" height="15" uuid="b015c8bf-eacd-4a3c-a28e-dee360cb7c1d"/>
+				<textElement textAlignment="Left">
+					<font fontName="FoundrySterling" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["N° DEM. : " +  $P{numeroDemande}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
