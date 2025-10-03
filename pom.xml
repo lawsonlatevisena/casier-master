@@ -32,6 +32,18 @@
                 <version>1.18.32</version>
                 <scope>provided</scope>
             </dependency>
+            <!-- JAXB API for Java 21 compatibility -->
+            <dependency>
+                <groupId>javax.xml.bind</groupId>
+                <artifactId>jaxb-api</artifactId>
+                <version>2.3.1</version>
+            </dependency>
+            <!-- JAXB Runtime implementation -->
+            <dependency>
+                <groupId>org.glassfish.jaxb</groupId>
+                <artifactId>jaxb-runtime</artifactId>
+                <version>2.3.3</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

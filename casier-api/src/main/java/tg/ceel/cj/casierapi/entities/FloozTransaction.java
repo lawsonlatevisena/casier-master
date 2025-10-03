@@ -26,7 +26,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 @NoArgsConstructor
 @AllArgsConstructor
 public class FloozTransaction extends BaseEntity {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
